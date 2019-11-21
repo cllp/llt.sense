@@ -5,6 +5,7 @@ using ActionFramework.Helpers.Data.Interface;
 using ActionFramework.Helpers.Data;
 using System.Collections.Generic;
 using System.Text.Json;
+using ActionFramework.Configuration;
 
 namespace Talkpool
 {
@@ -25,12 +26,8 @@ namespace Talkpool
         {
             var jsonobj = (JsonElement)obj;
 
-
-            var TableStorageConnectionString = ActionFramework.Configuration.ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"];
-
-            //init the message service
-            _dataService = DataFactory.GetDataService(SenseConnectionString);
-            _tableService = DataFactory.GetTableService(TableStorageConnectionString);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
+            _tableService = DataFactory.GetTableService(ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"]);
 
             try
             {

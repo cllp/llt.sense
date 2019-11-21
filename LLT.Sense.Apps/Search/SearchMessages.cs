@@ -5,6 +5,7 @@ using System.Linq;
 using ActionFramework.Helpers.Data.Interface;
 using ActionFramework.Helpers.Data;
 using System.Text.Json;
+using ActionFramework.Configuration;
 
 namespace Search
 {
@@ -16,8 +17,8 @@ namespace Search
        
         public override object Run(dynamic obj)
         {
-           
-            _dataService = DataFactory.GetDataService(SenseConnectionString);
+
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
 
             var jsonobj = (JsonElement)obj;
 
