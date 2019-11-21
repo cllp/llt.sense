@@ -21,7 +21,7 @@ namespace Netmore
         
         public override object Run(dynamic obj)
         {
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
             _tableService = DataFactory.GetTableService(ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"]);
 
             //declare the output

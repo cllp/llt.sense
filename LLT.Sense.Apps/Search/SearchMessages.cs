@@ -18,7 +18,7 @@ namespace Search
         public override object Run(dynamic obj)
         {
 
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
 
             var jsonobj = (JsonElement)obj;
 

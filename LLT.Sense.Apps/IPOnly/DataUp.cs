@@ -24,7 +24,7 @@ namespace IPOnly
             DateTime commTimestamp = DateTime.UtcNow;
 
             //init the message service
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
             _tableService = DataFactory.GetTableService(ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"]);
 
             try
