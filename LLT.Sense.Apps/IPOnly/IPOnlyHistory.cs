@@ -5,12 +5,9 @@ using LLT.Sense.Decoder;
 using ActionFramework.Helpers.Data.Interface;
 using ActionFramework.Helpers.Data;
 using System.Collections.Generic;
-using ActionFramework.Logger;
 using IPOnly.Helpers;
 using Newtonsoft.Json.Linq;
 using System.Dynamic;
-using System.Web;
-using System.Linq;
 using ActionFramework.Configuration;
 
 namespace LLT.API.Ingest.IPOnly
@@ -28,7 +25,7 @@ namespace LLT.API.Ingest.IPOnly
 
         public override object Run(dynamic obj)
         {
-            var TableStorageConnectionString = ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"];
+            //var TableStorageConnectionString = ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"];
 
             _dataService = DataFactory.GetDataService(SenseConnectionString);
             _tableService = DataFactory.GetTableService(TableStorageConnectionString);

@@ -13,7 +13,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{67660284-E5A5-43E9-BBFD-7414B7565CDF}"
 	ProjectSection(SolutionItems) = preProject
 		libs\ActionFramework.Helpers.Data.dll = libs\ActionFramework.Helpers.Data.dll
-		libs\ActionFramework.dll = libs\ActionFramework.dll
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netmore", "LLT.Sense.Apps\Netmore\Netmore.csproj", "{B6722E38-528A-47CF-9E59-1CEDF805A8AD}"

@@ -16,9 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="ActionFramework">
-      <HintPath>..\..\libs\ActionFramework.dll</HintPath>
-    </Reference>
     <Reference Include="ActionFramework.Helpers.Data">
       <HintPath>..\..\libs\ActionFramework.Helpers.Data.dll</HintPath>
     </Reference>
@@ -27,6 +24,7 @@
     <PackageReference Include="System.Text.Json" Version="4.6.0" />
     <PackageReference Include="Serilog" Version="2.9.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.1" />
+    <PackageReference Include="ActionFramework" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\LLT.Sense.Decoder\LLT.Sense.Decoder.csproj" />

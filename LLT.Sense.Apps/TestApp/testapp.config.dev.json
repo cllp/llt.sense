@@ -14,7 +14,7 @@
       {
         "Type": "string",
         "Key": "SenseConnectionString",
-        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+        "Value": "***"
       }
     ]
   }

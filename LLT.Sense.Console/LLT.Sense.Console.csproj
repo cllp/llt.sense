@@ -37,6 +37,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="3.0.1" />
     <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="ActionFramework" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Apps\" />
@@ -48,11 +49,6 @@
     <ProjectReference Include="..\LLT.Sense.Apps\IPOnly\IPOnly.csproj" />
     <ProjectReference Include="..\LLT.Sense.Apps\Talkpool\Talkpool.csproj" />
     <ProjectReference Include="..\LLT.Sense.Apps\Search\Search.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="ActionFramework">
-      <HintPath>..\libs\ActionFramework.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="json\SearchMessages.json">
