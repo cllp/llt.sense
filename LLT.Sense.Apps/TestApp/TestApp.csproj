@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ActionFramework">
+      <HintPath>..\..\libs\ActionFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="talkpool.config.prod.json" />
+    <None Remove="testapp.config.dev.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="testapp.config.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </Content>
+  </ItemGroup>
+</Project>

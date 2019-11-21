@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="json\SearchMessages.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="environment.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Apps\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="LogSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="json\NetmorePush.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="json\NetmorePush %28copy%29.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.Graylog" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="3.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apps\" />
+    <Folder Include="json\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LLT.Sense.Apps\TestApp\TestApp.csproj" />
+    <ProjectReference Include="..\LLT.Sense.Apps\Netmore\Netmore.csproj" />
+    <ProjectReference Include="..\LLT.Sense.Apps\IPOnly\IPOnly.csproj" />
+    <ProjectReference Include="..\LLT.Sense.Apps\Talkpool\Talkpool.csproj" />
+    <ProjectReference Include="..\LLT.Sense.Apps\Search\Search.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ActionFramework">
+      <HintPath>..\libs\ActionFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="json\SearchMessages.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

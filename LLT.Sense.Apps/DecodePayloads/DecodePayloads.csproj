@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DecodePayloads.config.dev.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DecodePayloads.config.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ActionFramework.Helpers.Data\ActionFramework.Helpers.Data.csproj" />
+    <ProjectReference Include="..\..\ActionFramework\ActionFramework.csproj" />
+    <ProjectReference Include="..\..\..\development\lltsense\LLT.Sense.Decoder\LLT.Sense.Decoder.csproj" />
+  </ItemGroup>
+
+</Project>

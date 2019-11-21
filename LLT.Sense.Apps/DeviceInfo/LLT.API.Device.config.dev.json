@@ -1,0 +1,173 @@
+﻿[
+  {
+    "ActionName": "BlueprintsCoordinates",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "",
+      "Authorize": false
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsense.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetDeviceInfo",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/device",
+      "Authorize": true
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetDeviceLogs",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/device/logs",
+      "Authorize": true
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "UpdateDevices",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "post",
+      "Route": "api/device/update",
+      "Authorize": true
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetDevices",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/devices",
+      "Authorize": true
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetDeviceFrequencyStatus",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/device/frequency",
+      "Authorize": true
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "SyncDevices",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "post",
+      "Route": "api/device/sync",
+      "Authorize": false
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsensedev.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetDailyReport",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/report/daily",
+      "Authorize": false
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsense.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  },
+  {
+    "ActionName": "GetTodayMessageCountByRealEstate",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "*/30 * * * *", //every minute
+    "ApiSettings": {
+      "Active": true,
+      "Method": "get",
+      "Route": "api/realestatereport",
+      "Authorize": false
+    },
+    "Properties": [
+      {
+        "Type": "string",
+        "Key": "SenseConnectionString",
+        "Value": "Server=tcp:lltsense.database.windows.net,1433;Initial Catalog=LLTSQL01;Persist Security Info=False;User ID=llt;Password=Visby1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+      }
+    ]
+  }
+]

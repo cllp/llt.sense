@@ -1,0 +1,61 @@
+﻿using System;
+using Action = ActionFramework.Action;
+using ActionFramework.Logger;
+using System.Collections.Generic;
+using System.Linq;
+using ActionFramework.Helpers.Data.Interface;
+using ActionFramework.Helpers.Data;
+
+namespace LLT.API.Message
+{
+    public class GetMessagesByDeviceType : Action
+    {
+        public string SenseConnectionString { get; set; }
+        private IDataService _dataService;
+
+        public override object Run(dynamic jsonData)
+        {
+            _dataService = DataFactory.GetDataService(SenseConnectionString);
+            dynamic obj = JsonConvert.DeserializeObject(jsonData.ToString());
+
+            var parameters = new Dictionary<string, string>();
+            parameters.Add("DeviceTypeName", obj.DeviceTypeName.ToString());
+            parameters.Add("FromDate", obj.FromDate.ToString());
+            parameters.Add("ToDate", obj.ToDate.ToString());
+
+            DateTime startQuery = DateTime.UtcNow;
+
+            try
+            {
+                var result = _dataService.GetMany<dynamic>("spGetMessagesByDeviceType", parameters);
+
+                return new
+                {
+                    Query = new
+                    {
+                        Timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"),
+                        DeviceTypeName = obj.DeviceTypeName.ToString(),
+                        FromDate = obj.FromDate.ToString(),
+                        ToDate = obj.ToDate.ToString(),
+                        Duration = String.Format("{0}ms", GetDuration(startQuery, DateTime.UtcNow)),
+                        Count = result.Count()
+                    },
+                    Result = result //JsonConvert.SerializeObject(result, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() })
+                };
+            }
+            catch (Exception ex)
+            {
+                //LogFactory.File.Error(ex, $"Action Search caused an exception");
+                throw ex;
+            }
+        }
+
+        private int GetDuration(DateTime dt1, DateTime dt2)
+        {
+            TimeSpan span = dt2 - dt1;
+            int ms = (int)span.TotalMilliseconds;
+            return ms;
+        }
+
+    }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "devEui": "a81758fffe0307e6",
+    "sensorType": "class_a_otaa",
+    "timestamp": "2019-09-09T21:33:57.184Z",
+    "payload": "0100de02330400020500070e23",
+    "fCntUp": 605073,
+    "spreadingFactor": "10",
+    "rssi": "-19",
+    "snr": "12",
+    "gatewayIdentifier": "213",
+    "fPort": "5"
+  }
+]

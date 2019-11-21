@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ActionFramework.Helpers.Data\ActionFramework.Helpers.Data.csproj" />
+    <ProjectReference Include="..\ActionFramework.Helpers.Messaging\ActionFramework.Helpers.Messaging.csproj" />
+    <ProjectReference Include="..\ActionFramework\ActionFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BlueprintsCoordinates.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LLT.API.Device.config.prod.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Update="LLT.API.Device.config.test.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Update="LLT.API.Device.config.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+  </ItemGroup>
+
+</Project>
