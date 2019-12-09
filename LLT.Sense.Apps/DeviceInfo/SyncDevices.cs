@@ -10,7 +10,7 @@ namespace LLTSense
 {
     public class SyncDevices : Action
     {
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         private IDataService _dataService;
 
         public override object Run(dynamic jsonData)

@@ -1,0 +1,21 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Graylog",
+        "Args": {
+          "hostnameOrAddress": "3lkjk6.stackhero-network.com",
+          "port": "12201",
+          "transportType": "Udp"
+        }
+      },
+      { "Name": "Console" }
+    ],
+    "Properties": {
+      "Application": "SenseServiceBus",
+      "Environment": "Development"
+    }
+  }
+
+}

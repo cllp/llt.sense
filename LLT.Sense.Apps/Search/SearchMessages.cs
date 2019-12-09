@@ -11,14 +11,14 @@ namespace Search
 {
     public class SearchMessages : Action
     {
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         public string SearchProcedure { get; set; }
         private IDataService _dataService;
        
         public override object Run(dynamic obj)
         {
 
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
 
             var jsonobj = (JsonElement)obj;
 

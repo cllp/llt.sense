@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LLT.Sense.Console", "LLT.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "LLT.Sense.Apps\Search\Search.csproj", "{9B357C50-D714-4779-AB8A-4F2DF637EEBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingest", "LLT.Sense.Apps\Ingest\Ingest.csproj", "{807446EB-09C9-474E-929C-B178EEBE7E3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9B357C50-D714-4779-AB8A-4F2DF637EEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B357C50-D714-4779-AB8A-4F2DF637EEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B357C50-D714-4779-AB8A-4F2DF637EEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807446EB-09C9-474E-929C-B178EEBE7E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807446EB-09C9-474E-929C-B178EEBE7E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807446EB-09C9-474E-929C-B178EEBE7E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807446EB-09C9-474E-929C-B178EEBE7E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{1D0B2E18-1236-449D-B2AE-D781258E16CA} = {B2B9A103-888F-4CAB-8294-C1CF40AC1916}
 		{BE9A0DA8-8EE4-4E21-8A62-0EF6489A6E27} = {B2B9A103-888F-4CAB-8294-C1CF40AC1916}
 		{9B357C50-D714-4779-AB8A-4F2DF637EEBE} = {B2B9A103-888F-4CAB-8294-C1CF40AC1916}
+		{807446EB-09C9-474E-929C-B178EEBE7E3D} = {B2B9A103-888F-4CAB-8294-C1CF40AC1916}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3721DCCE-06A9-4F75-B076-A34AE1AF13EF}

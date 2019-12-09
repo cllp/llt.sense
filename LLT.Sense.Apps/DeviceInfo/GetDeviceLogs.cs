@@ -10,7 +10,7 @@ namespace LLT.API.Device
 {
     public class GetDeviceLogs : Action
     {
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         private IDataService _dataService;
 
 

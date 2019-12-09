@@ -18,7 +18,7 @@ namespace LLT.API.Ingest.IPOnly
         private ITableService _tableService;
         private static readonly string Token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLndlc3Rlcmx1bmQiLCJyb2xlIjoiQURNSU4iLCJjdXN0b21lcklkIjoyLCJpc3MiOiJnbXMiLCJleHAiOjE1Njk5MTQ2NDh9.NL8rG77lAeFeoMGsUtsKlvGGqIa6TZIITvx9HmiPd28";
         private static readonly string DeviceQuery = "SELECT d.DeviceId, d.DevEui, dt.DecodeClassName FROM device d INNER JOIN DeviceType dt ON d.DeviceTypeId = dt.DeviceTypeId WHERE NetworkProvider = 'IPOnly' AND LatestCommTimestamp > '2019-09-24'";
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         public string TableStorageConnectionString { get; set; }
         private DateTime fromDate = DateTime.Parse("2019-09-18 08:00:00");
         private DateTime toDate = DateTime.Parse("2019-09-24 15:00:00");
@@ -27,7 +27,7 @@ namespace LLT.API.Ingest.IPOnly
         {
             //var TableStorageConnectionString = ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"];
 
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
             _tableService = DataFactory.GetTableService(ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"]);
 
             try

@@ -17,11 +17,11 @@ namespace Netmore
         private IDataService _dataService;
         private ITableService _tableService;
 
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         
         public override object Run(dynamic obj)
         {
-            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:AgentConnectionString"]);
+            _dataService = DataFactory.GetDataService(ConfigurationManager.Settings["AgentSettings:SenseConnectionString"]);
             _tableService = DataFactory.GetTableService(ConfigurationManager.Settings["AgentSettings:TableStorageConnectionstring"]);
 
             //declare the output

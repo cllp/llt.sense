@@ -10,7 +10,7 @@ namespace DecodePayloads
     public class DecodeDecentLabPayloads : ActionFramework.Action
     {
         private IDataService _dataService;
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         private static string DecoderName = "Decentlab";
 
         public override object Run(dynamic obj)

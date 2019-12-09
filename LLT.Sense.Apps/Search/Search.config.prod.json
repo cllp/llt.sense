@@ -11,11 +11,7 @@
       "Authorize": true
     },
     "Properties": [
-      {
-        "Type": "string",
-        "Key": "SenseConnectionString",
-        "Value": "***"
-      }
+      
     ]
   },
   {
@@ -32,8 +28,8 @@
     "Properties": [
       {
         "Type": "string",
-        "Key": "SenseConnectionString",
-        "Value": "***"
+        "Key": "SearchProcedure",
+        "Value": "spSearchMessages"
       }
     ]
   },
@@ -49,11 +45,6 @@
       "Authorize": true
     },
     "Properties": [
-      {
-        "Type": "string",
-        "Key": "SenseConnectionString",
-        "Value": "***"
-      },
       {
         "Type": "string",
         "Key": "SearchProcedure",

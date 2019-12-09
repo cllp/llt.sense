@@ -11,11 +11,7 @@
       "Authorize": true
     },
     "Properties": [
-      {
-        "Type": "string",
-        "Key": "SenseConnectionString",
-        "Value": "***"
-      }
+      
     ]
   }
 ]

@@ -10,7 +10,7 @@ namespace LLT.API.Device
 {
     public class BlueprintsCoordinates : Action
     {
-        public string SenseConnectionString { get; set; }
+        //public string SenseConnectionString { get; set; }
         private IDataService _dataService;
 
         public override object Run(dynamic jsonData)
