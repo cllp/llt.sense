@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\actionframework\ActionFramework\ActionFramework.csproj" />
+    <ProjectReference Include="..\..\..\actionframework\ActionFramework.Helpers.Data\ActionFramework.Helpers.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Ingest.config.dev.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Idun.config.dev.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </Content>
+  </ItemGroup>
+</Project>

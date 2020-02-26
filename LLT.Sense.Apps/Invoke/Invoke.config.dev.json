@@ -1,0 +1,17 @@
+﻿[
+  {
+    "ActionName": "InvokeSchedule",
+    "Active": true,
+    "CreatedDate": "2013-01-20T00:00:00Z",
+    "Cron": "5 * * * *",
+    "ApiSettings": {
+      "Active": true,
+      "Method": "Post",
+      "Route": "api/invoke",
+      "Authorize": false
+    },
+    "Properties": [
+
+    ]
+  }
+]
